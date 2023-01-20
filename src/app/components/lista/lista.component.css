@@ -1,0 +1,22 @@
+.tabla {
+    width: 80vw;
+    margin: 2rem;
+    border: 1px solid black;
+}
+
+.aprobado {
+    background-color: #28B463  
+}
+
+.desaprobado {
+    background-color:#D80F0F
+}
+
+.recursa {
+    background-color: #D80F0F
+}
+
+.noRecursa {
+    background-color: #28B463 
+}
+

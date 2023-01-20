@@ -1,0 +1,40 @@
+<div class="tabla">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Aprobado</th>
+            <th scope="col">Recursa</th>
+        </tr>
+        </thead>
+        <tbody *ngFor='let estudiante of estudiantes'>
+        <tr>
+            <td>{{estudiante.id}}</td>
+            <td>{{estudiante.nombre}}</td>
+            <td>{{estudiante.apellido}}</td>
+            <td>{{estudiante.edad}}</td>
+            <td [ngClass]='estudiante.estaAprobado === true ? "aprobado" : "desaprobado" '>{{estudiante.estaAprobado}}</td>
+            <td [ngClass]='estudiante.recursa === true ? "recursa" : "noRecursa"'>{{estudiante.recursa}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="tabla">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Estudiante</th>
+        </tr>
+        </thead>
+        <tbody *ngFor='let estudiante of estudiantes'>
+        <tr>
+            <td [ngClass]='estudiante.estaAprobado === true ? "aprobado" : "desaprobado" '>{{estudiante.estaAprobado}}>{{estudiante | json}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    
